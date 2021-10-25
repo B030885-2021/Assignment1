@@ -1,5 +1,7 @@
 #!/bin/bash
 
+cd bedtools_output
+
 echo -e "Making text files for of group comparisons. Column order will reflect that of files name, apart from groups by time, which will be ordered WT, C1, C2....."
 
 #paste averaged values with corresponding gene id/name files
@@ -26,4 +28,6 @@ paste WT.0.Uninduced.id C1.values.time.nm C2.values.time.nm > C1.vs.C2.av
 paste WT.0.Uninduced.id WT.0.Uninduced.values.nm Clone1.0.Uninduced.values.nm Clone2.0.Uninduced.values.nm > sample.groups.0.av
 paste WT.0.Uninduced.id WT.24.Induced.values.nm Clone1.24.Induced.values.nm Clone2.24.Induced.values.nm > sample.groups.24.av
 paste WT.0.Uninduced.id WT.48.Induced.values.nm Clone1.48.Induced.values.nm Clone2.48.Induced.values.nm > sample.groups.48.av
+
+cd ..
 
